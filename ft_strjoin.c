@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grcharle <grcharle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 12:20:53 by grcharle          #+#    #+#             */
-/*   Updated: 2025/04/30 13:00:57 by grcharle         ###   ########.fr       */
+/*   Created: 2025/05/02 02:48:37 by grcharle          #+#    #+#             */
+/*   Updated: 2025/05/02 02:49:26 by grcharle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	len;
-
-	len = ft_strlen(src);
-	if (!n)
-	{
-		return (len);
-	}
-	i = 0;
-	while (i < (n - 1) && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i += 1;
-	}
-	dest[i] = '\0';
-	return (len);
+	(void) s1;
+	(void) s2;
+	return (0);
 }
