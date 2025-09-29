@@ -6,7 +6,7 @@
 /*   By: grcharle <grcharle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 02:56:29 by grcharle          #+#    #+#             */
-/*   Updated: 2025/05/02 03:05:14 by grcharle         ###   ########.fr       */
+/*   Updated: 2025/05/16 08:20:15 by grcharle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	(void) s;
-	(void) fd;
-	return ;
+	while (*s)
+	{
+		ft_putchar_fd(*s, fd);
+		s += 1;
+	}
 }

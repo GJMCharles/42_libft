@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grcharle <grcharle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 12:56:18 by grcharle          #+#    #+#             */
-/*   Updated: 2025/04/30 13:00:04 by grcharle         ###   ########.fr       */
+/*   Created: 2025/07/30 12:02:14 by grcharle          #+#    #+#             */
+/*   Updated: 2025/08/26 14:30:25 by grcharle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 65 && c <= 90)
-		c += 32;
-	return (c);
+	if (!lst)
+		return ((t_list *)(void *)0);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

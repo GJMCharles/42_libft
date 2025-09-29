@@ -6,7 +6,7 @@
 /*   By: grcharle <grcharle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 02:52:34 by grcharle          #+#    #+#             */
-/*   Updated: 2025/05/02 02:53:30 by grcharle         ###   ########.fr       */
+/*   Updated: 2025/05/16 23:49:46 by grcharle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	(void) s;
-	(void) f(0, 0);
-	return (0);
+	char			*ptr;
+	unsigned int	i;
+
+	i = 0;
+	ptr = (char *)ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (!ptr)
+		return (0);
+	while (s[i])
+	{
+		ptr[i] = f(i, s[i]);
+		i += 1;
+	}
+	return (ptr);
 }
